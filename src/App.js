@@ -1,4 +1,4 @@
-import { IonApp, IonContent, IonHeader, IonInput, IonTitle, IonToolbar } from '@ionic/react';
+import { IonApp, IonContent, IonHeader, IonInput, IonItem, IonLabel, IonList, IonTitle, IonToolbar } from '@ionic/react';
 import { useState } from 'react';
 
 function App() {
@@ -11,9 +11,22 @@ function App() {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <IonInput placeholder="Your name"
-          value={name} onIonChange={(event) => setName(event.detail.value)}
-        />
+        <IonList>
+          <IonItem>
+            <IonLabel position="stacked">
+              Name:
+            </IonLabel>
+            <IonInput value={name}
+              onIonChange={(event) => setName(event.detail.value)}
+            />
+          </IonItem>
+          <IonItem>
+            <IonLabel position="stacked">
+              Date of Birth:
+            </IonLabel>
+            <IonInput />
+          </IonItem>
+        </IonList>
         <p>
           You entered: <b>{name}</b>
         </p>

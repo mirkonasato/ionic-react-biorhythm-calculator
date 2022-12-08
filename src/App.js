@@ -5,7 +5,7 @@ function App() {
     <IonApp>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>My App</IonTitle>
+          <IonTitle>Biorhythms</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">

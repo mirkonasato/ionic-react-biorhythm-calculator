@@ -3,6 +3,8 @@ import { useState } from 'react';
 
 function App() {
   const [name, setName] = useState('');
+  const [birthDate, setBirthDate] = useState('');
+
   return (
     <IonApp>
       <IonHeader>
@@ -24,11 +26,13 @@ function App() {
             <IonLabel position="stacked">
               Date of Birth:
             </IonLabel>
-            <IonInput />
+            <IonInput type="date" value={birthDate}
+              onIonChange={(event) => setBirthDate(event.detail.value)}
+            />
           </IonItem>
         </IonList>
         <p>
-          You entered: <b>{name}</b>
+          You entered: <b>{name}</b>, born on <b>{birthDate}</b>
         </p>
       </IonContent>
     </IonApp>

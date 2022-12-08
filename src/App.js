@@ -18,6 +18,9 @@ function App() {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
+        {Boolean(birthDate) && (
+          <BiorhythmCard birthDate={birthDate} targetDate={targetDate} />
+        )}
         <IonList>
           <IonItem>
             <IonLabel position="fixed">
@@ -36,7 +39,6 @@ function App() {
             />
           </IonItem>
         </IonList>
-        <BiorhythmCard targetDate={targetDate} />
       </IonContent>
     </IonApp>
   );
